@@ -32,7 +32,7 @@ app.use('/uploads', express.static('uploads'));
 
 app.set('view engine', 'ejs');
 
-app.get('/', user.home); //homepage
+app.get('/', post.home); //homepage
 
 app.get('/users', user.list); //list page
 app.get('/posts', post.list); //list page

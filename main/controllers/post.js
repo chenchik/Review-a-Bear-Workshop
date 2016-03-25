@@ -116,6 +116,15 @@ exports.show = function(req, res) {
     });
 };
 
+exports.home = function(req, res){
+	var collection = db.get().collection('posts');
+	
+	//collection.find({})
+    collection.find({}).toArray(function(err, results) {
+        res.render('post/list', {posts: results});
+    });
+}
+
 exports.update = function(req, res) {
     var collection = db.get().collection('posts');
 
