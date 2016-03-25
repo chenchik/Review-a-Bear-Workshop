@@ -36,7 +36,7 @@
 					
 					<a href="/posts"><img class="headerImage " src="../../uploads/bear_icon.jpg"/></a>
 					<div class="titleDiv">
-						<p class="title ">Build a Post WorkShop</p>
+						<p class="title ">Review a Bear WorkShop</p>
 					</div>
 				</div>
 				<div class="otherheaderContainer">
@@ -86,7 +86,7 @@
 						  </ul>
 						</div>
 						
-						<% console.log(posts); %>
+						
 						
 						
 					
@@ -118,49 +118,82 @@
 		<div class="container">
 			
 			<% if (posts.length) { %>
-			
+				
 				<% for (var i in posts) { %>
-				<div class="outerPostContainer col-md-6">
-					<div class="postContainer">
-						<div class="imgConatiner">
-							<img src="../../uploads/<%= posts[i].thumbnail %>" class="postImage"/>
-						</div>
-						<div class="NotImagePostContainer">
-							<div class="titleContainer">
-								<p class="postTitle"><%= posts[i].title %></p>
-								
-								
-							</div>
-							<div class="buttonsContainer">
-								<p>By <a href="/author/<%= posts[i].author %>" class=" metaA contentAuthor"><%= posts[i].author %></a>
-								<br>
-								Posted in <a href="/category/<%= posts[i].category %>" class="metaA contentDate"><%= posts[i].category %></a> on <%= posts[i].date %></p>
-								<a href="/posts/<%= posts[i].title %>"><span class="glyphicon glyphicon-pencil"></span><!--<img class="editButton alterButton" src="../../uploads/pencil.png"/>--></a>
-								<a href="/posts/delete/<%= posts[i].title %>"><!--<img class="deleteButton alterButton" src="../../uploads/trash.png"/>--><span class="glyphicon glyphicon-trash"></span></a>
-								
-								<!--stars-->
-								<% console.log(posts[i].stars); %>
-								<% for(var j = 0; j < 5; j++){ %>
-									<% if(j < posts[i].stars){ %>
-										<span class="activeStar stars glyphicon glyphicon-star"></span>
-									<% }else{ %>
-										<span class="inactiveStar stars glyphicon glyphicon-star"></span>
-									<% } %>
-								<% } %>
-								
-								
-								
-								
-							</div>
-							
-						</div>
+					<% console.log(i); %>
+					<% if(i%2 == 0){  %>
+					<!--<div class="divider<% i/2 %>">-->
+					
+					<% } %>
+					
+						<div class="outerPostContainer col-md-6 ">
+					
 						
-					</div>
-					<div class="contentContainer">
-						<p class="postContent"> <%= posts[i].content %></p>
-					</div>
-				</div>
+							<div class="postContainer">
+								<div class="imgConatiner">
+									<img src="../../uploads/<%= posts[i].thumbnail %>" class="postImage"/>
+								</div>
+								<div class="NotImagePostContainer">
+									<div class="titleContainer">
+										<p class="postTitle"><%= posts[i].title %></p>
+										
+										
+									</div>
+									<div class="buttonsContainer">
+										<p>By <a href="/author/<%= posts[i].author %>" class=" metaA contentAuthor"><%= posts[i].author %></a>
+										<br>
+										Posted in <a href="/category/<%= posts[i].category %>" class="metaA contentDate"><%= posts[i].category %></a> on <%= posts[i].date %></p>
+										<a href="/posts/<%= posts[i].title %>"><span class="glyphicon glyphicon-pencil"></span><!--<img class="editButton alterButton" src="../../uploads/pencil.png"/>--></a>
+										<a href="/posts/delete/<%= posts[i].title %>"><!--<img class="deleteButton alterButton" src="../../uploads/trash.png"/>--><span class="glyphicon glyphicon-trash"></span></a>
+										
+										<!--stars-->
+										
+										<% for(var j = 0; j < 5; j++){ %>
+											<% if(j < posts[i].stars){ %>
+												<span class="activeStar stars glyphicon glyphicon-star"></span>
+											<% }else{ %>
+												<span class="inactiveStar stars glyphicon glyphicon-star"></span>
+											<% } %>
+										<% } %>
+										
+										
+										
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="contentContainer">
+								<p class="postContent"> <%= posts[i].content %></p>
+							</div>
+						</div>
+					<% if(i%2 != 0 || i == posts.length-1){ %>
+						<!--</div>-->
+					<% } %>
 				<% } %>
+				
+				<!--<script>
+					$('body').css({'background-color': 'red'});
+					var max = 0;
+					var len = $('.divider').children().length;
+					for(var i = 0; i < posts.length; i++){
+						if($('.divider'+i/2).children().lenght > 0){
+							console.log($('.divider'+i/2).children());
+						}
+					
+					
+					}
+					
+					console.log($('.divider').children());
+					$('.divider').each(function() {
+						console.log($(this).height());
+						if ($(this).height() > max)
+							max = $(this).height();
+					});
+					$('.divider').css({'height': max + ' px'});
+				
+				</script>-->
 			
         <% } else { %>
         <p class="noContent">Sorry, there is no content yet.</p>
@@ -172,7 +205,7 @@
 				
 				<div class="col-lg-5 col-sm-8 col-xs-6">
 					<!--<img class="footerElem" src="../uploads/Signature_White.png"/>-->
-					<p><a class="footerElem" href="#">Project Information</a></p>
+					<p><a class="footerElem" href="http://github.com/chenchik/Review-a-Bear-Workshop">Project Information</a></p>
 					
 				</div>
 				<div class="col-lg-4 col-sm-0 col-xs-0">

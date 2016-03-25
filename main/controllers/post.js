@@ -1,7 +1,7 @@
 var db = require('../config/db');
 
 exports.list = function(req, res) {
-	console.log("normal LIST");
+	
 	
 	
     var collection = db.get().collection('posts');
