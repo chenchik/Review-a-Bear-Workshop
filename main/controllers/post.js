@@ -57,7 +57,7 @@ exports.form = function(req, res) {
 exports.search = function(req,res){
 	var collection = db.get().collection('posts');
 	
-	console.log(req);
+	
 	
     collection.find({
 		title: req.body.search
@@ -76,8 +76,7 @@ exports.create = function(req,res){
 		}
 	});*/
 	
-	console.log(req.file.originalname);
-	console.log(req.body.stars);
+	
 	
 	var collection = db.get().collection('posts');
 	
