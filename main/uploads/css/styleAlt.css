@@ -18,7 +18,7 @@ input[type=file] {
 }
 .contentContainer {
     padding-left: 0px;
-	    height: 160px;
+	    /*height: 160px;*/
     margin-top: 16px;
     overflow: auto;
 
@@ -41,10 +41,11 @@ img.postImage {
 	object-fit: cover;
 }
 .inbetweener {
-    height: 400px;
+    height: initial;
+	
     width: 100%;
     background: url("../bear_fur.jpg");
-    padding-top: 100px;
+    padding-top: 80px;
 	text-align: center;
 }
 p.inbetweenText {
@@ -55,14 +56,18 @@ p.inbetweenText {
 }
 .interweenTextContainer {
     padding-top: 62px;
+	padding-bottom: 40px;
 }
 body{
 	/*background-color: #e7e7e7 !important;*/
 }
 .container {
     background: white;
-    /*padding-top: 100px;*/
+    margin-top: 0px;
 	position: relative;
+}
+.outerPostContainer {
+    padding-top: 40px;
 }
 .headerContainer {
     display: flex;
@@ -83,7 +88,7 @@ body{
     display: flex;
 }
 .headerImgContainer {
-    width: 27%;
+    width: 29%;
 	height: 100%;
 	display: -webkit-box;
 }
@@ -97,7 +102,7 @@ img.headerImage {
     /*margin-left: auto;*/
 }
 .otherheaderContainer {
-    width: 73%;
+    width: 71%;
 }
 p.title {
     font-family: 'Varela Round', sans-serif;
@@ -387,10 +392,12 @@ textarea#content {
 
 .inbetweenForm {
     background: #876951 !important;
-    height: 280px;
+    height: initial;
+	padding-top: 100px;
 }
 .interweenTextContainerForm {
     padding-top: 40px !important;
+	padding-bottom: 5px !important;
 }
 
 #footer {
@@ -416,10 +423,82 @@ a.footerElem:hover {
 
 
 /**** MEDIA QUERIES*****/
+/*@media only screen and (min-width: 1201px) {
+	.listContainer {
+		-moz-column-width: 18em;
+		
+		-moz-column-gap: 1em;
+		
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px;
+		column-count: 2;
+		column-gap: 10px;
+		width: 1170px;
+	}
+	.col-md-6 {
+		width: 100% !important;
+	}
+	
+}*/
+
+
+
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
+	/*.listContainer {
+		-moz-column-width: 18em;
+		
+		-moz-column-gap: 1em;
+		
+		-moz-column-count: 2;
+		-moz-column-gap: 10px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 10px;
+		column-count: 2;
+		column-gap: 10px;
+		width: 1170px;
+	}
+	.col-md-6 {
+		width: 100% !important;
+	}
+	*/
+	
+	
    .headerContainer {
-	   width: 80%;
+	   width: 100%;
    }
+   a.halfDelButton {
+	   padding: 8px 41px 10px 40px;
+   }
+   .halfUpdateButton {
+		width: 49% !important;
+	}
+   input#search{
+	   width: 66.2%;
+   }
+   .headerImgContainer {
+	   width: 35%;
+   }
+   .headerImgContainer {
+	       width: 35%;
+   }
+   .btn-group, .btn-group-vertical{
+	   width: 32.8%;
+   }
+   .otherheaderContainer {
+		width: 65%;
+	}
+	p.inbetweenText{
+		font-size: 22px;
+	}
+	.inbetweener{
+		height: initial;
+    /*padding-bottom: 40px;*/
+	}
+	span.glyphicon{
+		margin-right: 10px;
+	}
 }
 @media only screen and (max-width: 991px) and (min-width: 744px) {
 	.headerContainer {
@@ -431,8 +510,45 @@ a.footerElem:hover {
 	.titleAndContentContainer {
 		width: 60%;
 	}
+	a.halfDelButton{
+		padding: 8px 41px 10px 40px;
+	}
+	.halfUpdateButton {
+		width: 49% !important;
+	}
+	.innerHeaderContainer{
+		display: block;
+	}
+	.headerImgContainer {
+		width: 42.45%;
+		margin: auto;
+	}
+	.otherheaderContainer {
+		width: 100%;
+		margin-top: 10px;
+	}
+	.btn-group, .btn-group-vertical{
+		width: 32.8%;
+	}
+	input#search {
+		width: 66%;
+	}
+	button#searchSubmit {
+		width: 33%;
+	}
+	.interweenTextContainer{
+		    padding-top: 50px;
+    padding-bottom: 40px;
+	}
+	.inbetweener{
+		height: initial;
+		padding-top: 180px;
+	}
+	p.inbetweenText{
+		font-size:20px;
+	}
 }
-@media only screen and (max-width: 743px) and (min-width: 0px) {
+@media only screen and (max-width: 743px) and (min-width: 601px) {
 	.headerContainer {
 	   width: 100%;
 	   display: block;
@@ -479,17 +595,223 @@ a.footerElem:hover {
 		    margin-bottom: 10px;
 	}
 	button.postButton {
-		width: 50%;
+		width: 100% !important;
 		height: 40px;
     padding: 0px;
     margin-left: 0px;
     font-size: 20px;
+	/*margin-bottom: 0px;*/
+		margin-top: 20px;
 	}
 	.newPostDiv{
 		text-align: center;
 	}
 	.inputField{
 		font-size: 14px;
+	}
+	a.halfDelButton{
+		padding: 8px 46% 10px 45%;
+	}
+	.halfUpdateButton {
+		margin-bottom: 20px;
+		margin-top: 20px;
+		
+	}
+	button.postButton.formCreateButton.halfUpdateButton {
+		margin-top: 18px;
+	}
+	
+	
+	.innerHeaderContainer{
+		display: block;
+		width: 100%;
+	}
+	
+	.headerImgContainer {
+		width: 50%;
+		margin: auto;
+	}
+	.otherheaderContainer {
+		width: 100%;
+		margin-top: 10px;
+	}
+	.btn-group, .btn-group-vertical{
+		width: 32.8%;
+	}
+	input#search {
+		width: 66%;
+	}
+	button#searchSubmit {
+		width: 33%;
+	}
+	.headerContainer{
+		width: 100%;
+		margin-top: 0px; 
+	}
+	button.postButton {
+		margin-top: 0px;
+	}
+	.interweenTextContainer{
+		    padding-top: 40px;
+    padding-bottom: 20px;
+	}
+	.inbetweener{
+		height: initial;
+		padding-top: 180px;
+	}
+	p.inbetweenText{
+		font-size:20px;
+	}
+	.container{
+		margin-top: 0px;
+	}
+	p.inbetweenText {
+		line-height: 20px;
+	}
+	.outerPostContainer {
+		padding-top: 20px;
+	}
+	.inputContainer.container {
+		margin-top: 20px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.headerContainer {
+	   width: 100%;
+	   display: block;
+	       height: initial;
+		       margin-top: 20px;
+    margin-bottom: 20px;
+   }
+    .headerImgContainer {
+		width: 100%;
+		height: 80px;
+	}
+	img.headerImage {
+		margin-right: auto;
+		width: 80px;
+		height: 80px;
+	}
+   .otherInputsContainer {
+		width: 100%;
+	}
+	.otherheaderContainer {
+		width: 100%;
+	}
+	.titleAndContentContainer {
+		width: 100%;
+	}
+	.inputContainer {
+		display: block;
+		padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+	}
+	.titleAndContentContainer {
+		padding-right: 0px;
+	}
+	p.title {
+		padding-top: 0px;
+		margin-left: 0px; 
+		height: 40px;
+		font-size: 30px;
+	}
+	.titleDiv {
+		height: 40px;
+		text-align: center;
+		    margin-bottom: 10px;
+	}
+	button.postButton {
+		width: 100% !important;
+		height: 40px;
+    padding: 0px;
+    margin-left: 0px;
+    font-size: 20px;
+	/*margin-bottom: 0px;*/
+		margin-top: 20px;
+	}
+	.newPostDiv{
+		text-align: center;
+	}
+	.inputField{
+		font-size: 14px;
+	}
+	a.halfDelButton{
+		padding: 8px 43% 10px 45%;
+	}
+	.halfUpdateButton {
+		margin-bottom: 20px;
+		margin-top: 20px;
+		
+	}
+	
+	
+	.innerHeaderContainer{
+		display: block;
+		width: 100%;
+	}
+	
+	.headerImgContainer {
+		width: 65%;
+		margin: auto;
+	}
+	.otherheaderContainer {
+		width: 100%;
+		margin-top: 10px;
+	}
+	.btn-group, .btn-group-vertical{
+		width: 32.6%;
+	}
+	input#search {
+		width: 66%;
+	}
+	button#searchSubmit {
+		width: 33%;
+	}
+	.headerContainer{
+		width: 100%;
+		margin-top: 0px; 
+	}
+	button.postButton {
+		margin-top: 0px;
+	}
+	.interweenTextContainer{
+		    padding-top: 40px;
+    padding-bottom: 20px;
+	}
+	.inbetweener{
+		height: initial;
+		padding-top: 180px;
+	}
+	p.inbetweenText{
+		font-size:20px;
+	}
+	.container{
+		margin-top: 0px;
+	}
+	p.inbetweenText {
+		line-height: 20px;
+	}
+	span.glyphicon{
+		margin-right: 10px;
+	}
+	.postContainer{
+		padding-top: 0px;
+	}
+	.buttonsContainer{
+		margin-left: 20px;
+	}
+	.titleContainer{
+		margin-left: 20px;
+	}
+	.outerPostContainer {
+		padding-top: 20px;
+	}
+	.inputContainer.container {
+		margin-top: 20px;
+	}
+	button.postButton.formCreateButton.halfUpdateButton {
+		margin-top: 18px;
 	}
 }
 
@@ -502,4 +824,11 @@ p.noContent {
     width: 100%;
     text-align: center;
     padding: 20px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+a:hover {
+    opacity: 0.9;
 }

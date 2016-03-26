@@ -105,7 +105,7 @@
 				<% for (var i in posts) { %>
 					
 					<% if(i%2 == 0){  %>
-					<!--<div class="divider<% i/2 %>">-->
+						<div id="divider<%= i/2 %>">
 					
 					<% } %>
 					
@@ -152,31 +152,30 @@
 							</div>
 						</div>
 					<% if(i%2 != 0 || i == posts.length-1){ %>
-						<!--</div>-->
+						</div>
 					<% } %>
 				<% } %>
 				
-				<!--<script>
-					$('body').css({'background-color': 'red'});
-					var max = 0;
-					var len = $('.divider').children().length;
-					for(var i = 0; i < posts.length; i++){
-						if($('.divider'+i/2).children().lenght > 0){
-							console.log($('.divider'+i/2).children());
-						}
-					
-					
-					}
-					
-					console.log($('.divider').children());
-					$('.divider').each(function() {
-						console.log($(this).height());
-						if ($(this).height() > max)
-							max = $(this).height();
-					});
-					$('.divider').css({'height': max + ' px'});
 				
-				</script>-->
+				<!-- executing script in context -->
+				<script>
+					
+					var i = 0;
+					while(i < $('.container').children().length-1){
+						var maxHeight = 0;
+						for(var j = 0; j < $('#divider'+i).children().length; j++){
+							var curNode =  $('#divider'+i).children()[j];
+							var jQueriedCurNode = $(curNode);
+							var curHeight = curNode.clientHeight;	
+							if(curHeight > maxHeight){
+								maxHeight = curHeight;
+							}	
+						}
+						maxHeight = maxHeight + 20;
+						$('#divider'+i).height(maxHeight);
+						i++;
+					}
+				</script>
 			
         <% } else { %>
         <p class="noContent">Sorry, there is no content yet.</p>
