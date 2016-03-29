@@ -45,7 +45,7 @@ img.postImage {
 	
     width: 100%;
     background: url("../bear_fur.jpg");
-    padding-top: 80px;
+    padding-top: 120px;
 	text-align: center;
 }
 p.inbetweenText {
@@ -72,8 +72,8 @@ body{
 .headerContainer {
     display: flex;
 	position: fixed;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
     /*height: 54px;*/
 	    margin-left: auto;
     margin-right: auto;
