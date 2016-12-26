@@ -1,5 +1,5 @@
 # Review-a-Bear-Workshop
-A CMS built with Node.js, an Express Framework, and a MongoDB Database. In this project, the client is Build a Bear workshop and the content mangagement system being built for them is one for all their reviews.
+A CMS built with Node.js, an Express Framework, and a MongoDB Database. In this project, the hypothetical client is Build a Bear workshop and the content mangagement system being built for them is one for all their reviews.
 
 In order to create a local copy on your computer use the command:
 
