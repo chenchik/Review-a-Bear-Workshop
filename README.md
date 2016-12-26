@@ -20,6 +20,7 @@ start up a vagrant machine with:
 <code>vagrant ssh</code>
 
 Then navigate to "main" directory in vagrant, start the server, and run the code with:
+
 <code>cd /vagrant/review-a-bear-workshop</code>
 
 <code>node index.js</code>
