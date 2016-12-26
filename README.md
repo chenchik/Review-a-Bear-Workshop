@@ -1,5 +1,5 @@
 # Review-a-Bear-Workshop
-A Content Management System built with Node.js, an Express Framework, Vagrant, and a MongoDB Database. In this project, the hypothetical client is Build a Bear workshop and the content mangagement system being built for them is one for all their reviews.
+A Content Management System built with Node.js, an Express Framework, Vagrant, and a MongoDB Database. In this project, the hypothetical client is Build a Bear workshop and the content management system being built for them is one that holds and manages all their reviews.
 
 In order to create a local copy on your computer use the command:
 
